@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+            xmlns:views="clr-namespace:Logbig.Views"
+             x:Class="Logbig.MenuShell"
+       
+      FlyoutHeaderBehavior="CollapseOnScroll" Shell.FlyoutBehavior="Flyout"
+       FlyoutBehavior="Flyout" BackgroundColor="#33333D" ForegroundColor="White" 
+       UnselectedColor="#95FFFFFF" DisabledColor="#B4FFFFFF"  TitleColor="White">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black">
+
+
+
+                <Image Aspect="Fill"
+                       Source="car.jpg"
+                       Opacity="0.6"/>
+                <Label Text="The Photo"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"
+                      >
+
+                </Label>
+            </Grid>
+
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+
+                    <ColumnDefinition Width="0.8*"/>
+
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding FlyoutIcon}"
+                       Margin="5"
+                       HeightRequest="45"></Image>
+                <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       FontAttributes="Italic" VerticalTextAlignment="Center"
+                       ></Label>
+
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+
+                    <ColumnDefinition Width="0.8*"/>
+
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45"></Image>
+                <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       FontAttributes="Italic" VerticalTextAlignment="Center"
+                       ></Label>
+
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    <FlyoutItem Title="RandomPhoto" Icon="logo.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:Info}" Title="random" Route="random">
+
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Featured"  Icon="chain.png" Route="featured">
+        <Tab Route="featuredTab">
+            <ShellContent Title="Inicio" Route="Inicio">
+                <views:WelcomePage></views:WelcomePage>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+</Shell>

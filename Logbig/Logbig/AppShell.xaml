@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+       xmlns:local="clr-namespace:Logbig.Views"      
+       x:Class="Logbig.AppShell">
+    <TabBar>
+        <Tab Title="Login" Icon="logo.png">
+            <ShellContent ContentTemplate="{DataTemplate local:LoginPage}">
+                
+            </ShellContent>
+        </Tab>
+        <Tab Title="Info" Icon="chain.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Info}">
+
+            </ShellContent>
+        </Tab>
+    </TabBar>
+</Shell>
