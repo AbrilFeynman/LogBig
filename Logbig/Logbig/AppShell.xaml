@@ -32,5 +32,10 @@
 
             </ShellContent>
         </Tab>
+        <Tab Title="Tab6" Icon="logo.png">
+            <ShellContent ContentTemplate="{DataTemplate local:LoginPage}">
+
+            </ShellContent>
+        </Tab>
     </TabBar>
 </Shell>
