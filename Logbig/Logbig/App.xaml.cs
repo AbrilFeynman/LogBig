@@ -5,6 +5,8 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 
+using Microsoft.AppCenter.Push;
+
 
 namespace Logbig
 {
@@ -23,7 +25,9 @@ namespace Logbig
             AppCenter.Start("android=786c8c90-e361-409c-a456-4b678ba839a0;" +
                   "uwp={Your UWP App secret here};" +
                   "ios={Your iOS App secret here}",
-                  typeof(Analytics), typeof(Crashes));
+                  typeof(Analytics), typeof(Crashes),typeof(Push));
+
+         
         }
 
         protected override void OnSleep()
