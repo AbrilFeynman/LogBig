@@ -17,5 +17,10 @@
 
             </ShellContent>
         </Tab>
+        <Tab Title="Other" Icon="dev.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Info}">
+
+            </ShellContent>
+        </Tab>
     </TabBar>
 </Shell>
